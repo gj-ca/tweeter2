@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   get "users", to: "users#index"
   get "users/new", to: "users#new"
   get "users/:user_id", to: "users#show", as: "user"

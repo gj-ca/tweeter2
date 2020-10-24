@@ -3,3 +3,8 @@
 <h5>Password: <%= @user.password %></h5>
 
 <%= link_to "All Users", users_path %>
+
+<h1>Posts by this user</h1>
+<% @posts.each do |post| %>
+    <p><%= post.title %> <%= link_to "show post", post_path(post.id) %></p>
+<% end %>

@@ -6,7 +6,9 @@ class UsersController < ApplicationController
     def show
         # render json: params
         @user = User.find(params[:user_id])
+        @posts = Post.where(user_id: params[:user_id])
     end
+
     def new
         @user = User.new
     end
