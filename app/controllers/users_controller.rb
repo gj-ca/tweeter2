@@ -32,6 +32,11 @@ class UsersController < ApplicationController
         redirect_to users_path
     end
 
+    def destroy
+        User.destroy(params[:user_id])
+        redirect_to users_path
+    end
+
     private
     def user_params
         # params.require(:form_name).permit(:field1, :field2, etc)
